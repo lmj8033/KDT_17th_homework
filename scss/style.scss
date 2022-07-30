@@ -2,14 +2,15 @@
 @import "reset";
 
 /*FONTS
-font-family: 'Share Tech Mono', monospace;*/
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+font-family: 'Carter One', cursive;
+font-family: 'Sansita', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Teko', sans-serif;
+Read our FAQs*/
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Sansita&family=Shadows+Into+Light&family=Teko:wght@300&display=swap');
 
 /*COMMON*/
 body {
-    background-color: beige;
-    font: 17px/1.4 'Khand';
-    color: #ddd;
 
     .wrap {
         width: 100%;
@@ -38,7 +39,7 @@ body {
             //widht의 반값
             margin-top: -400px;
             //height 의 반값
-            animation: panorama linear 20s infinite;
+            animation: panorama linear 30s infinite;
             transform-style: preserve-3d;
 
             article {
@@ -49,7 +50,11 @@ body {
                 left: 0px;
                 backface-visibility: hidden;
                 // display: none;
-                // &:nth-of-type(4) {
+                // &:nth-of-type(7) {
+                //     display: block;
+                // }
+
+                // &:nth-of-type(6) {
                 //     display: block;
                 // }
 
@@ -61,8 +66,6 @@ body {
                     > div {
                         width: 100%;
                         height: 100%;
-                        background-color: rgba(121, 4, 4, 0.7);
-                        border: 1px solid rgba(63, 9, 9, 0.5);
                         padding: 20px;
                         position: relative;
                         overflow: hidden;
@@ -79,30 +82,56 @@ body {
                 
                 &.item1 {
                     transform: rotateY(0deg) translateZ(-764px);
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+                    }
+
                     .inner {
+
+
                         div {
+                            
+                            background-color: rgba(#7a81a2,0.7);
+                            border: 1px solid rgba(#7a81a2,0.7);
+
                             h2 {
-                                font: bold 24px/1;
-                                color: lightcyan;
+                                font: bold 40px 'Carter One' ;
+                                color: black;
                             }
 
                             img {
                                 width: 100%;
-                                margin: 20px 0 40px 0px;
+                                margin: 20px 0 10px 0px;
                             }
 
                             h3 {
-                                color: lightcyan;
-                                margin-bottom: 10px;
+                                color: black;
+                                margin-bottom: 15px;
+                                font-family: 'Sansita';
+                                font-size: 50px;
+
                             }
 
                             p {
-                                font: 18px/1.3;
+                                font: 30px/1.3;
+                                color: black;
+                                font-family:  'Sansita';
+                                margin-top: 35px;
                             }
 
                             &:hover {
                                 h2, h3 {
-                                    text-shadow: 0px 0px 10px rgb(226, 246, 129);
+                                    text-shadow: 0px 0px 10px white;
                                 }
                             }
                         }
@@ -111,8 +140,24 @@ body {
 
                 &.item2 {
                     transform: rotateY(45deg) translateZ(-764px);
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+                    }
                     .inner {
                         div {
+                            background-color: rgba(#718ec4,0.7);
+                            border: 1px solid rgba(#718ec4,0.7);
+
                             width: 290px;
                             height: 388px;
                             float: left;
@@ -124,20 +169,17 @@ body {
                             }
 
                             h2 {
-                                margin-top: 3px;
+                                margin-top: 0;
                                 transition: 0.5s;
+                                font-family: 'Shadows Into Light';
+                                font-size: 30px;
+                                color: black;
                             }
 
                             &:hover {
-                                i {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
-                                    transform: scale(1.2);
-                                    opacity: 1;
-                                }
-
                                 h2 {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
-                                    transform: scale(1.2);
+                                    text-shadow: 0px 0px 10px white;
+                                    transform: scale(1.1);
                                     opacity: 1;
                                 }
                             }
@@ -147,43 +189,31 @@ body {
 
                 &.item3 {
                     transform: rotateY(90deg) translateZ(-764px);
-                    .inner {
-                        div {
-                            h2 {
-                                font: bold 24px/1;
-                                color: lightcyan;
-                            }
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
 
-                            img {
-                                width: 100%;
-                                margin: 20px 0 40px 0px;
-                            }
+                    h1 {
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
 
-                            h3 {
-                                color: lightcyan;
-                                margin-bottom: 10px;
-                            }
-
-                            p {
-                                font: 18px/1.3;
-                            }
-
-                            &:hover {
-                                h2, h3 {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
-                                }
-                            }
+                        a {
+                            color: #5464b3;
                         }
                     }
-                }
-
-                &.item4 {
-                    transform: rotateY(135deg) translateZ(-764px);
                     .inner {
                         div {
+                            background-color: rgba(#dc8998,0.7);
+                            border: 1px solid rgba(#dc8998,0.7);
+
                             h2 {
-                                font: bold 30px/1;
+                                font-size: 35px;
                                 color: black;
+                                font-family: 'Shadows Into Light';
                             }
 
                             img {
@@ -192,7 +222,8 @@ body {
 
                             h3 {
                                 color: black;
-                                font-size: 40px;
+                                font-size: 50px;
+                                font-family: 'Carter One';
                                 text-align: center;
                                 margin-bottom: 10px;
                             }
@@ -200,12 +231,78 @@ body {
                             p {
                                 text-align: center;
                                 color:black;
-                                font: 20px/1.3;
+                                font-size: 15px;
+                                font-family: 'Sansita';
                             }
 
                             &:hover {
                                 h2, h3 {
-                                    text-shadow: 0px 0px 10px rgb(255, 194, 186);
+                                    text-shadow: 0px 0px 10px white;
+                                }
+                            }
+
+                            &:hover img {
+                                animation: youngblood 10s linear infinite;
+                            }
+                        }
+                    }
+                }
+
+                &.item4 {
+                    transform: rotateY(135deg) translateZ(-764px);
+
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+
+                        a {
+                            color: #5464b3;
+                        }
+                    }
+
+                    .inner {
+                        div {
+                            background-color: rgba(#df94a2,0.7);
+                            border: 1px solid rgba(#df94a2,0.7);
+                            
+                            h2 {
+                                font-size: 35px;
+                                color: black;
+                                font-family: 'Shadows Into Light';
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+
+                            h3 {
+                                color: black;
+                                font-size: 50px;
+                                font-family: 'Carter One';
+                                text-align: center;
+                                margin-bottom: 10px;
+                            }
+
+                            p {
+                                text-align: center;
+                                color:black;
+                                font-size: 15px;
+                                font-family: 'Sansita';
+                            }
+                            
+
+                            &:hover {
+                                h2, h3 {
+                                    text-shadow: 0px 0px 10px white;
                                 }
                             }
 
@@ -218,31 +315,58 @@ body {
 
                 &.item5 {
                     transform: rotateY(180deg) translateZ(-764px);
+
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+
+                        a {
+                            color: #5464b3;
+                        }
+                    }
+
                     .inner {
                         div {
+                            background-color: rgba(#fec5b9,0.7);
+                            border: 1px solid rgba(#fec5b9,0.7);
+                            
                             h2 {
-                                font: bold 24px/1;
-                                color: lightcyan;
+                                font-size: 35px;
+                                color: black;
+                                font-family: 'Shadows Into Light';
                             }
 
                             img {
                                 width: 100%;
-                                // margin-left: 50px;
-                                // transition: 10s;
                             }
 
                             h3 {
-                                color: lightcyan;
+                                color: black;
+                                font-size: 50px;
+                                font-family: 'Carter One';
+                                text-align: center;
                                 margin-bottom: 10px;
                             }
 
                             p {
-                                font: 18px/1.3;
+                                text-align: center;
+                                color:black;
+                                font-size: 15px;
+                                font-family: 'Sansita';
                             }
 
                             &:hover {
                                 h2, h3 {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
+                                    text-shadow: 0px 0px 10px white;
                                 }
                             }
 
@@ -255,31 +379,58 @@ body {
 
                 &.item6 {
                     transform: rotateY(225deg) translateZ(-764px);
+
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+
+                        a {
+                            color: #5464b3;
+                        }
+                    }
+
                     .inner {
                         div {
+                            background-color: rgba(#fecdc3,0.7);
+                            border: 1px solid rgba(#fecdc3,0.7);
+                            
                             h2 {
-                                font: bold 24px/1;
-                                color: lightcyan;
+                                font-size: 35px;
+                                color: black;
+                                font-family: 'Shadows Into Light';
                             }
 
                             img {
                                 width: 100%;
-                                // margin-left: 50px;
-                                // transition: 10s;
                             }
 
                             h3 {
-                                color: lightcyan;
+                                color: black;
+                                font-size: 50px;
+                                font-family: 'Carter One';
+                                text-align: center;
                                 margin-bottom: 10px;
                             }
 
                             p {
-                                font: 18px/1.3;
+                                text-align: center;
+                                color:black;
+                                font-size: 15px;
+                                font-family: 'Sansita';
                             }
 
                             &:hover {
                                 h2, h3 {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
+                                    text-shadow: 0px 0px 10px white;
                                 }
                             }
 
@@ -292,45 +443,130 @@ body {
 
                 &.item7 {
                     transform: rotateY(270deg) translateZ(-764px);
+
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+                    }
+
                     .inner {
-                        div {
-                            h2 {
-                                font: bold 24px/1;
-                                color: lightcyan;
-                            }
+
+                        .store1 {
+                            height: 256px;
+                            background-color: rgba(#f1dcd9,0.7);
+                            border: 1px solid rgba(#f1dcd9,0.7);
+                            display: flex;
+                            position: relative;
 
                             img {
-                                width: 100%;
-                                // margin-left: 50px;
-                                // transition: 10s;
+                                transition: 0.5s;
+                                padding-right: 60px;
                             }
 
-                            h3 {
-                                color: lightcyan;
-                                margin-bottom: 10px;
+                            h2 {
+                                color: black;
+                                font-size: 30px;
+                                font-family: 'Sansita';
+                                position: absolute;
+                                margin: 20px 0 0 240px;
+                                    
                             }
 
-                            p {
-                                font: 18px/1.3;
-                            }
-
-                            &:hover {
-                                h2, h3 {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
-                                }
-                            }
-
-                            &:hover img {
-                                animation: youngblood 10s linear infinite;
-                            }
+                        &:hover img {
+                            transform: scale(1.1);
                         }
+                        }
+
+                        .store2 {
+                            height: 256px;
+                            margin-top: 16px;
+                            background-color: rgba(#f1dcd9,0.7);
+                            border: 1px solid rgba(#f1dcd9,0.7);
+                            display: flex;
+                            position: relative;
+
+                            img {
+                                transition: 0.5s;
+                                // float:right;
+                                padding-right: 60px;
+                            }
+
+                            h2 {
+                                color: black;
+                                font-size: 30px;
+                                font-family: 'Sansita';
+                                position: absolute;
+                                margin: 15px 0 0 250px;
+                                    
+                            }
+                            
+                        &:hover img {
+                            transform: scale(1.1);
+                        }
+                        }
+
+                        .store3 {
+                            height: 256px;
+                            margin-top: 16px;
+                            background-color: rgba(#f1dcd9,0.7);
+                            border: 1px solid rgba(#f1dcd9,0.7);
+                            display: flex;
+                            position: relative;
+
+                            img {
+                                transition: 0.5s;
+                                padding-right: 60px;
+                            }
+
+                            h2 {
+                                color: black;
+                                font-size: 30px;
+                                font-family: 'Sansita';
+                                position: absolute;
+                                margin: 15px 0 0 230px;
+                                    
+                            }
+
+                        &:hover img {
+                            transform: scale(1.11);
+                            text-shadow: 0px 0px 10px white;
+                        }
+                        }
+                        
                     }
                 }
 
                 &.item8 {
                     transform: rotateY(315deg) translateZ(-764px);
+
+                    &:hover h1 {
+                        opacity: 1;
+                        transform: translateY(-25px);
+                    }
+
+                    h1 {
+                        color: #5464b3;
+                        font-size: 30px;
+                        font-family: 'Sansita';
+                        transform: translateY(50px);
+                        transition: 0.5s;
+                        opacity: 0;
+                    }
+
                     .inner {
                         div {
+                            background-color: rgba(#898ad6,0.7);
+                            border: 1px solid rgba(#898ad6,0.7);
+
                             width: 290px;
                             height: 254px;
                             float: left;
@@ -342,27 +578,29 @@ body {
                             }
 
                             i {
-                                color: lightcyan;
+                                color: black;
                                 font-size: 100px;
                                 opacity: 0.7;
                                 transition: 0.5s;
+                                margin-top: 20px;
                             }
 
                             h2 {
-                                margin-top: 20px;
+                                margin-top: 30px;
                                 transition: 0.5s;
+                                color: black;
                             }
 
                             &:hover {
                                 i {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
-                                    transform: scale(1.2);
+                                    text-shadow: 0px 0px 10px white;
+                                    transform: scale(1.1);
                                     opacity: 1;
                                 }
 
                                 h2 {
-                                    text-shadow: 0px 0px 10px rgb(175, 18, 133);
-                                    transform: scale(1.2);
+                                    text-shadow: 0px 0px 10px white;
+                                    transform: scale(1.1);
                                     opacity: 1;
                                 }
                             }
